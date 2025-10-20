@@ -19,6 +19,12 @@ import AppLayout from "./layout/AppLayout";
 import { ScrollToTop } from "./components/common/ScrollToTop";
 import Home from "./pages/Dashboard/Home";
 
+
+ {/* Pages */}
+
+import Contacts from "./pages/Contacts/FormContacts";
+import ProductsAndServices from "./pages/product_services/ProductsAndServices";
+
 export default function App() {
   return (
     <>
@@ -28,6 +34,14 @@ export default function App() {
           {/* Dashboard Layout */}
           <Route element={<AppLayout />}>
             <Route index path="/" element={<Home />} />
+
+            {/* Accounting System */}
+            <Route path="/productsAndServices" element={<ProductsAndServices />} />
+            <Route path="/Contacts" element={<Contacts />} />
+            
+
+
+            
 
             {/* Others Page */}
             <Route path="/profile" element={<UserProfiles />} />
