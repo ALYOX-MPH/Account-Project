@@ -29,13 +29,8 @@ type NavItem = {
 const navItems: NavItem[] = [
   {
     icon: <GridIcon />,
-    name: "Dashboard",
-    subItems: [{ name: "Ecommerce", path: "/", pro: false }],
-  },
-  {
-    icon: <CalenderIcon />,
-    name: "Calendar",
-    path: "/calendar",
+    name: "Inicio",
+    subItems: [{ name: "Inicio Principal", path: "/", pro: false }],
   },
   {
     name: "Contactos",  
@@ -45,7 +40,7 @@ const navItems: NavItem[] = [
       { name: "Cuentas Por Cobrar", path: "/CuentaXCobrar", pro: false },
       { name: "Cuentas por Pagar", path: "/CuentaXPagar", pro: false }
     ],
-   },
+  },
   {
     name: "Inventario",
     icon: <LuBox />,
@@ -58,28 +53,57 @@ const navItems: NavItem[] = [
     ],
   },
   {
-    name: "Tables",
+    name: "Compras",
     icon: <TableIcon />,
     subItems: [
       { name: "Basic Tables", path: "/basic-tables", pro: false },
       { name: "Basic Tables", path: "/basic-tables", pro: false }
-
+      
     ],
   },
   {
-    name: "Pages",
+    name: "Facturas",
     icon: <PageIcon />,
     subItems: [
       { name: "Blank Page", path: "/blank", pro: false },
       { name: "404 Error", path: "/error-404", pro: false },
     ],
   },
+  {
+    name: "Contavilidad",
+    icon: <PageIcon />,
+    subItems: [
+      { name: "Blank Page", path: "/blank", pro: false },
+      { name: "404 Error", path: "/error-404", pro: false },
+    ],
+  },
+  {
+    name: "Recursos Humanos",
+    icon: <PageIcon />,
+    subItems: [
+      { name: "Blank Page", path: "/blank", pro: false },
+      { name: "404 Error", path: "/error-404", pro: false },
+    ],
+  },
+   {
+    name: "Reportes",
+    icon: <ListIcon />,
+    subItems: [
+      { name: "Blank Page", path: "/blank", pro: false },
+      { name: "404 Error", path: "/error-404", pro: false },
+    ],
+  },
+  {
+    icon: <CalenderIcon />,
+    name: "Calendar",
+    path: "/calendar",
+  },
 ];
 
-const othersItems: NavItem[] = [
+const ConfiguracionItems: NavItem[] = [
   {
     icon: <PieChartIcon />,
-    name: "Charts",
+    name: "Parametros",
     subItems: [
       { name: "Line Chart", path: "/line-chart", pro: false },
       { name: "Bar Chart", path: "/bar-chart", pro: false },
@@ -87,7 +111,7 @@ const othersItems: NavItem[] = [
   },
   {
     icon: <BoxCubeIcon />,
-    name: "UI Elements",
+    name: "Usuarios",
     subItems: [
       { name: "Alerts", path: "/alerts", pro: false },
       { name: "Avatar", path: "/avatars", pro: false },
@@ -112,7 +136,7 @@ const AppSidebar: React.FC = () => {
   const location = useLocation();
 
   const [openSubmenu, setOpenSubmenu] = useState<{
-    type: "main" | "others";
+    type: "main" | "Configuracion";
     index: number;
   } | null>(null);
   const [subMenuHeight, setSubMenuHeight] = useState<Record<string, number>>(
@@ -128,14 +152,14 @@ const AppSidebar: React.FC = () => {
 
   useEffect(() => {
     let submenuMatched = false;
-    ["main", "others"].forEach((menuType) => {
-      const items = menuType === "main" ? navItems : othersItems;
+    ["main", "Configuracion"].forEach((menuType) => {
+      const items = menuType === "main" ? navItems : ConfiguracionItems;
       items.forEach((nav, index) => {
         if (nav.subItems) {
           nav.subItems.forEach((subItem) => {
             if (isActive(subItem.path)) {
               setOpenSubmenu({
-                type: menuType as "main" | "others",
+                type: menuType as "main" | "Configuracion",
                 index,
               });
               submenuMatched = true;
@@ -162,7 +186,7 @@ const AppSidebar: React.FC = () => {
     }
   }, [openSubmenu]);
 
-  const handleSubmenuToggle = (index: number, menuType: "main" | "others") => {
+  const handleSubmenuToggle = (index: number, menuType: "main" | "Configuracion") => {
     setOpenSubmenu((prevOpenSubmenu) => {
       if (
         prevOpenSubmenu &&
@@ -175,7 +199,7 @@ const AppSidebar: React.FC = () => {
     });
   };
 
-  const renderMenuItems = (items: NavItem[], menuType: "main" | "others") => (
+  const renderMenuItems = (items: NavItem[], menuType: "main" | "Configuracion") => (
     <ul className="flex flex-col gap-4">
       {items.map((nav, index) => (
         <li key={nav.name}>
@@ -374,12 +398,12 @@ const AppSidebar: React.FC = () => {
                 }`}
               >
                 {isExpanded || isHovered || isMobileOpen ? (
-                  "Others"
+                  "Configuracion"
                 ) : (
                   <HorizontaLDots />
                 )}
               </h2>
-              {renderMenuItems(othersItems, "others")}
+              {renderMenuItems(ConfiguracionItems, "Configuracion")}
             </div>
           </div>
         </nav>
