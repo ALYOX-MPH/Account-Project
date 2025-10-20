@@ -23,7 +23,7 @@ export default function Blank() {
                 Gestiona la información de los clientes que podrás asociar en tus documentos de venta.
               </p>
             </div>
-            <button className="mt-4 sm:mt-0 flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-white shadow-md transition hover:bg-blue-700">
+            <button>
               <IoMdAdd className="text-lg" />
               Nuevo Contacto
             </button>
