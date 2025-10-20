@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router";
+import { LuBox } from "react-icons/lu";
 
 // Assume these icons are imported from an icon library
 import {
@@ -47,9 +48,15 @@ const navItems: NavItem[] = [
     ],
    },
   {
-    name: "Forms",
-    icon: <ListIcon />,
-    subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
+    name: "Inventario",
+    icon: <LuBox />,
+    subItems: [
+      { name: "Productos y servicios", path: "/productsAndServices", pro: false },
+      { name: "Almacenes", path: "/form-elements", pro: false },
+      { name: "form example", path: "/form-elements", pro: false }
+ 
+
+    ],
   },
   {
     name: "Tables",
