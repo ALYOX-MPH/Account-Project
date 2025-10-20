@@ -73,8 +73,12 @@ const navItems: NavItem[] = [
     name: "Contavilidad",
     icon: <PageIcon />,
     subItems: [
-      { name: "Blank Page", path: "/blank", pro: false },
-      { name: "404 Error", path: "/error-404", pro: false },
+      { name: "Catalogo de Cuentas", path: "/ChartofAccounts", pro: false },
+      { name: "Bancos", path: "/error-404", pro: false },
+      { name: "Registros CK/ND/NCR", path: "/error-404", pro: false },
+      { name: "Conclinacion Edo.Cta", path: "/error-404", pro: false },
+      { name: "Activos fijos", path: "/error-404", pro: false },
+      { name: "Comprobantes", path: "/error-404", pro: false },
     ],
   },
   {
