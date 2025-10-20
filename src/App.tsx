@@ -21,7 +21,9 @@ import Home from "./pages/Dashboard/Home";
 
 
  {/* Pages */}
-import ProductsAndServices from "./pages/product_services/productsAndServices";
+
+import Contacts from "./pages/Contacts/FormContacts";
+import ProductsAndServices from "./pages/product_services/ProductsAndServices";
 
 export default function App() {
   return (
@@ -35,6 +37,8 @@ export default function App() {
 
             {/* Accounting System */}
             <Route path="/productsAndServices" element={<ProductsAndServices />} />
+            <Route path="/Contacts" element={<Contacts />} />
+            
 
 
             

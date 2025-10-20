@@ -41,10 +41,9 @@ const navItems: NavItem[] = [
     name: "Contactos",  
     icon: <UserCircleIcon />,
     subItems: [
-      { name: "Crear Clientes", path: "/form-elements", pro: false },
-      { name: "Crear Provedores", path: "/form-elements", pro: false },
-      { name: "Cuentas Por Cobrar", path: "/form-elements", pro: false },
-      { name: "Cuentas por Pagar", path: "/form-elements", pro: false }
+      { name: "Crear Contactos", path: "/Contacts", pro: false },
+      { name: "Cuentas Por Cobrar", path: "/CuentaXCobrar", pro: false },
+      { name: "Cuentas por Pagar", path: "/CuentaXPagar", pro: false }
     ],
    },
   {
