@@ -9,6 +9,9 @@ import { useModal } from "../../hooks/useModal";
 import { Modal } from "../../components/ui/modal";
 // import Button from "../../components/Utilities/Button";
 
+// Main component
+import {ModalForm } from "./components/ModalForm";
+
 
 
 
@@ -49,30 +52,7 @@ export default function ProductsAndServices() {
               {/*Modal add product or service */}
               <Modal isOpen={isOpen}  onClose={closeModal} className="max-w-[700px] p-6 lg:p-10">
                 {/* Contenido del modal */}
-                <div>
-                  <h2 className="text-2xl font-semibold mb-4 text-dark dark:text-white">Agregar Nuevo Producto o Servicio</h2>
-                  <form>
-                    <div className="mb-4">
-                      <label className="block text-gray-700 dark:text-gray-300 mb-2" htmlFor="name">
-                        Nombre
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        className="w-full rounded border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none dark:bg-gray-800 dark:border-gray-600 dark:text-white"
-                      />
-                    </div>
-                    <div className="mb-4">
-                      <label className="block text-gray-700 dark:text-gray-300 mb-2" htmlFor="description">
-                        Descripción
-                      </label>
-                      <textarea
-                        id="description"
-                        className="w-full rounded border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none dark:bg-gray-800 dark:border-gray-600 dark:text-white"
-                      ></textarea>
-                    </div>
-                  </form>
-                </div>
+                  <ModalForm />
               </Modal>
               
 
