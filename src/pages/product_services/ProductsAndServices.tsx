@@ -19,7 +19,7 @@ import {ModalForm } from "./components/ModalForm";
 export default function ProductsAndServices() {
 
   // Estado del modal
-    const { isOpen, openModal, closeModal } = useModal();
+  
 
   return (
     <div>
@@ -45,17 +45,13 @@ export default function ProductsAndServices() {
 
             {/* right button */}
             <div className="flex justify-end">
-              {/* <button onClick={openModal} className="rounded h-10 bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700">
-                + Nuevo Producto o Servicio
-              </button> */}
+              <button className="btn btn-primary" onClick={()=>document.getElementById('ModalAddContact').showModal()}>+ Nuevo Producto o Servicio</button>
 
-              <button className="btn btn-primary">+ Nuevo Producto o Servicio</button>
-
-              {/*Modal add product or service */}
-              <Modal isOpen={isOpen}  onClose={closeModal} className="max-w-[700px] p-6 lg:p-10">
-                {/* Contenido del modal */}
+              <dialog id="ModalAddContact" className="modal">
+                <div className="modal-box max-w-2xl ">
                   <ModalForm />
-              </Modal>
+                </div>
+              </dialog>
               
 
             </div>

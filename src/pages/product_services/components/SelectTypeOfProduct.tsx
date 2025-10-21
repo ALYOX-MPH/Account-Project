@@ -7,7 +7,7 @@ export function SelectTypeOfProduct({onTypeChange}: {onTypeChange: (type: string
 
     return (
         <div>
-            <label htmlFor="typeOfProduct" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo de Producto o Servicio</label>
+            <label htmlFor="typeOfProduct" className="block mb-2 text-sm font-medium text-white dark:text-gray-400">Tipo de Producto o Servicio</label>
 
             <ul className="flex gap-3 text-dark dark:text-white mt-5"> 
                 <li onClick={() => {
