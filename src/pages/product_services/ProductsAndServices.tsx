@@ -2,15 +2,15 @@ import PageBreadcrumb from "../../components/common/PageBreadCrumb";
 import PageMeta from "../../components/common/PageMeta";
 
 //Hooks
-import { useState } from "react";
-import { useModal } from "../../hooks/useModal";
+
 
 // Utilities components
-import { Modal } from "../../components/ui/modal";
 // import Button from "../../components/Utilities/Button";
 
 // Main component
 import {ModalForm } from "./components/ModalForm";
+import BasicTableOne from "../../components/tables/BasicTables/BasicTableOne";
+import {TableProductService} from "./components/TableProductService";
 
 
 
@@ -33,7 +33,7 @@ export default function ProductsAndServices() {
         {/* Big Card */}
         <div className="w-full">
           {/* header */}
-          <div className="grid grid-cols-2 ">
+          <div className="grid grid-cols-2 mb-6 ">
 
             {/* left text */}
             <div className="flex flex-col justify-start">
@@ -56,6 +56,9 @@ export default function ProductsAndServices() {
 
             </div>
           </div>
+
+          <TableProductService />
+
 
 
         </div>
