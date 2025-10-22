@@ -21,12 +21,16 @@ export default function DefaultInputs() {
     <ComponentCard title="Default Inputs">
       <div className="space-y-6">
         <div>
-          <Label htmlFor="input">Input</Label>
+          <Label htmlFor="input">Nombre Completo </Label>
           <Input type="text" id="input" />
         </div>
         <div>
-          <Label htmlFor="inputTwo">Input with Placeholder</Label>
-          <Input type="text" id="inputTwo" placeholder="info@gmail.com" />
+          <Label htmlFor="inputTwo">RNC</Label>
+          <Input type="number" id="inputTwo" placeholder="Numero de Comproba" />
+        </div>
+        <div>
+          <Label htmlFor="inputTwo">Direccion</Label>
+          <Input type="text" id="direccion" placeholder="Nombre del sector" />
         </div>
         <div>
           <Label>Select Input</Label>
