@@ -13,6 +13,14 @@ import {
 } from "react-icons/fa";
 import { FaArrowTrendUp, FaAngleDown, FaAngleUp, FaEye, FaArrowTrendDown, FaBuilding, FaMoneyBillWave, FaUserShield, FaMoneyBillTransfer, FaChartLine, FaIndustry, FaCalendarCheck, FaFileInvoiceDollar } from "react-icons/fa6";
 
+// Esta parte es de las opciones del select con iconos, Es una libreria
+const options = [
+  { value: "activo", label: <div className="flex items-center gap-2"><FaBuilding /> Activo</div> },
+  { value: "activo_fijo", label: <div className="flex items-center gap-2"><FaMoneyBillWave /> Activo Fijo</div> },
+  { value: "pasivo", label: <div className="flex items-center gap-2"><FaUserShield /> Pasivo</div> },
+  { value: "patrimonio", label: <div className="flex items-center gap-2"><FaChartLine /> Patrimonio</div> },
+];
+
 
 export default function Blank() {
   // Estado del modal
