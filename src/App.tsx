@@ -25,6 +25,7 @@ import Home from "./pages/Dashboard/Home";
 import Contacts from "./pages/Contacts/FormContacts";
 import ProductsAndServices from "./pages/product_services/ProductsAndServices";
 import ChartofAccounts from "./pages/ChartofAccounts/ChartofAccounts";
+import Invoice from "./pages/Invoices/Invoice";
 
 export default function App() {
   return (
@@ -40,6 +41,7 @@ export default function App() {
             <Route path="/productsAndServices" element={<ProductsAndServices />} />
             <Route path="/Contacts" element={<Contacts />} />
             <Route path="/ChartofAccounts" element={<ChartofAccounts />} />
+            <Route path="/Invoice" element={<Invoice />} />
             
 
 

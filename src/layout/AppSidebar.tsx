@@ -65,7 +65,7 @@ const navItems: NavItem[] = [
     name: "Facturas",
     icon: <PageIcon />,
     subItems: [
-      { name: "Blank Page", path: "/blank", pro: false },
+      { name: "Factura de venta", path: "/Invoice", pro: false },
       { name: "404 Error", path: "/error-404", pro: false },
     ],
   },
