@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router";
 import { LuBox } from "react-icons/lu";
-
+import { HiOutlineBuildingLibrary } from "react-icons/hi2";
 // Assume these icons are imported from an icon library
 import {
   BoxCubeIcon,
@@ -71,10 +71,10 @@ const navItems: NavItem[] = [
   },
   {
     name: "Contavilidad",
-    icon: <PageIcon />,
+    icon: <HiOutlineBuildingLibrary />,
     subItems: [
       { name: "Catalogo de Cuentas", path: "/ChartofAccounts", pro: false },
-      { name: "Bancos", path: "/error-404", pro: false },
+      { name: "Bancos", path: "/Banks", pro: false },
       { name: "Registros CK/ND/NCR", path: "/error-404", pro: false },
       { name: "Conclinacion Edo.Cta", path: "/error-404", pro: false },
       { name: "Activos fijos", path: "/error-404", pro: false },
