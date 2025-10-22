@@ -28,6 +28,7 @@ const tableData: Order[] = [
   {
     id: 1,
     user: {
+
       image: "/images/user/user-17.jpg",
       name: "Lindsey Curtis",
       role: "Web Designer",
