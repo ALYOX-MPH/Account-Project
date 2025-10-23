@@ -75,7 +75,7 @@ const navItems: NavItem[] = [
     subItems: [
       { name: "Catalogo de Cuentas", path: "/ChartofAccounts", pro: false },
       { name: "Bancos", path: "/Banks", pro: false },
-      { name: "Registros CK/ND/NCR", path: "/error-404", pro: false },
+      { name: "Registros CK/ND/NCR", path: "/RegistrosCKNDNCR", pro: false },
       { name: "Conclinacion Edo.Cta", path: "/error-404", pro: false },
       { name: "Activos fijos", path: "/error-404", pro: false },
       { name: "Comprobantes", path: "/error-404", pro: false },
