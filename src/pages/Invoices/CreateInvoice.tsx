@@ -25,12 +25,12 @@ export function CreateInvoice(){
       {/* Header */}
       <div className="flex justify-between items-center mb-6">
 
-        <h1 className="text-2xl font-semibold text-gray-800 dark:text-white">
+        <h1 className="text-2xl font-semibold text-gray-800 dark:text-white ">
           Nueva Factura
         </h1>
 
         <div className="flex space-x-3">
-          <button className="btn btn-outline">
+          <button className="btn btn-outline ">    
             <CiExport className="text-2xl" />
             Exportar
           </button> 
@@ -46,7 +46,7 @@ export function CreateInvoice(){
         <div>
             <label htmlFor="Storage" className="label mb-2 dark:text-gray-300">Almacen</label>
 
-            <select defaultValue="Principal" className="select rounded-lg">
+            <select defaultValue="Principal" className="select rounded-lg ">
                 <option>Principal</option>
                 <option>Ventas</option>
             </select>
