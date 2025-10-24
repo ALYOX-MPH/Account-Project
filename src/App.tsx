@@ -26,6 +26,7 @@ import Contacts from "./pages/Contacts/FormContacts";
 import ProductsAndServices from "./pages/product_services/ProductsAndServices";
 import ChartofAccounts from "./pages/ChartofAccounts/ChartofAccounts";
 import Invoice from "./pages/Invoices/Invoice";
+import { CreateInvoice } from "./pages/Invoices/CreateInvoice";
 import Banks from "./pages/Banks/Bancks";
 import Registros from "./pages/RegistrosCK/ND/NCR/Registros";
 
@@ -44,6 +45,7 @@ export default function App() {
             <Route path="/Contacts" element={<Contacts />} />
             <Route path="/ChartofAccounts" element={<ChartofAccounts />} />
             <Route path="/Invoice" element={<Invoice />} />
+            <Route path="/Invoice/create" element={<CreateInvoice />} />
             <Route path="/Banks" element={<Banks />} />
             <Route path="/RegistrosCKNDNCR" element={<Registros />} />
             
