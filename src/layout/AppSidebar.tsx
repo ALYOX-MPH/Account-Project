@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router";
-import { LuBox } from "react-icons/lu";
-import { HiOutlineBuildingLibrary } from "react-icons/hi2";
+import { HiOutlineBuildingLibrary, HiOutlineClipboardDocumentList } from "react-icons/hi2";
+import { TiShoppingCart } from "react-icons/ti";
 // Assume these icons are imported from an icon library
 import {
   BoxCubeIcon,
@@ -9,14 +9,17 @@ import {
   ChevronDownIcon,
   GridIcon,
   HorizontaLDots,
-  ListIcon,
-  PageIcon,
+
   PieChartIcon,
   PlugInIcon,
-  TableIcon,
+ 
   UserCircleIcon,
 } from "../icons";
 import { useSidebar } from "../context/SidebarContext";
+
+import { AiOutlineProduct } from "react-icons/ai";
+import { FaPeopleGroup } from "react-icons/fa6";
+import { TbReport } from "react-icons/tb";
 import SidebarWidget from "./SidebarWidget";
 
 type NavItem = {
@@ -36,37 +39,49 @@ const navItems: NavItem[] = [
     name: "Contactos",  
     icon: <UserCircleIcon />,
     subItems: [
-      { name: "Crear Contactos", path: "/Contacts", pro: false },
+      { name: "Clientes  |  Proveedores", path: "/Contacts", pro: false },
+      { name: "Vendedores", path: "/Contacts", pro: false },
       { name: "Cuentas Por Cobrar", path: "/CuentaXCobrar", pro: false },
       { name: "Cuentas por Pagar", path: "/CuentaXPagar", pro: false }
     ],
   },
   {
     name: "Inventario",
-    icon: <LuBox />,
+    icon: <AiOutlineProduct />,
     subItems: [
       { name: "Productos y servicios", path: "/productsAndServices", pro: false },
       { name: "Almacenes", path: "/form-elements", pro: false },
-      { name: "form example", path: "/form-elements", pro: false }
+      { name: "Listado de Precios", path: "/form-elements", pro: false },
+      { name: "Cargos | Descargos", path: "/form-elements", pro: false },
+      { name: "Traslados", path: "/form-elements", pro: false },
+      { name: "Conteo de Inventario", path: "/form-elements", pro: false },
+      { name: "Traslados", path: "/form-elements", pro: false },
  
 
     ],
   },
   {
     name: "Compras",
-    icon: <TableIcon />,
+    icon: <TiShoppingCart />,
     subItems: [
-      { name: "Basic Tables", path: "/basic-tables", pro: false },
-      { name: "Basic Tables", path: "/basic-tables", pro: false }
+      { name: "Inicio Compras", path: "/basic-tables", pro: false },
+      { name: "Registro de Compras", path: "/basic-tables", pro: false },
+      { name: "Orden de Compras", path: "/basic-tables", pro: false },
+      { name: "Devolucion de Compras", path: "/basic-tables", pro: false },
+      { name: "Nota de Entrega", path: "/basic-tables", pro: false },
       
     ],
   },
   {
     name: "Facturas",
-    icon: <PageIcon />,
+    icon: <HiOutlineClipboardDocumentList />,
     subItems: [
-      { name: "Factura de venta", path: "/Invoice", pro: false },
-      { name: "404 Error", path: "/error-404", pro: false },
+      { name: "Inicio Factura", path: "/Invoice", pro: false },
+      { name: "Registro de Factura", path: "/Invoice/create", pro: false },
+      { name: "Cotizacion", path: "/error-404", pro: false },
+      { name: "Devolucion", path: "/error-404", pro: false },
+      { name: "Recividor de Clientes", path: "/error-404", pro: false },
+      { name: "Nota de Entrega", path: "/error-404", pro: false },
     ],
   },
   {
@@ -82,19 +97,26 @@ const navItems: NavItem[] = [
     ],
   },
   {
-    name: "Recursos Humanos",
-    icon: <PageIcon />,
+    name: "Reportes",
+    icon: <TbReport />,
     subItems: [
-      { name: "Blank Page", path: "/blank", pro: false },
-      { name: "404 Error", path: "/error-404", pro: false },
+      { name: "Contactos", path: "/blank", pro: false },
+      { name: "Inventario", path: "/error-404", pro: false },
+      { name: "Compras", path: "/error-404", pro: false },
+      { name: "Facturas", path: "/error-404", pro: false },
+      { name: "Contabilidad", path: "/error-404", pro: false },
+      { name: "Recursos Humanos", path: "/error-404", pro: false },
+      { name: "Analisis Financiero", path: "/error-404", pro: false },
     ],
   },
-   {
-    name: "Reportes",
-    icon: <ListIcon />,
+  {
+    name: "Recursos Humanos",
+    icon: <FaPeopleGroup />,
     subItems: [
-      { name: "Blank Page", path: "/blank", pro: false },
-      { name: "404 Error", path: "/error-404", pro: false },
+      { name: "Empleados", path: "/blank", pro: false },
+      { name: "Departamentos de Empresa", path: "/error-404", pro: false },
+      { name: "Nomina", path: "/error-404", pro: false },
+      { name: "Liquidaciones", path: "/error-404", pro: false },
     ],
   },
   {
