@@ -11,6 +11,7 @@ import { Link } from "react-router";
 //Components
 import { ContactSeccion } from "./components/ContactSeccion";
 import { TableSeccion } from "./components/TableSeccion";
+import { SumsSeccion } from "./components/SumsSeccion";
 
 
 
@@ -85,12 +86,16 @@ export function CreateInvoice(){
 
             <TableSeccion />
 
-
-        
-
-
+            <SumsSeccion />
         </div>
       </div>
+
+      <footer className="flex items-center justify-end gap-x-6 mt-10 h-18 px-3 rounded border-1 bg-gray-100 dark:bg-gray-800 dark:border-gray-700">
+        <button>guardar e imprimir</button>
+        <button>Guardar y enviar por correo</button>
+        <button className="btn bg-blue-400 px-10 rounded-2xl">Guardar</button>
+      </footer>
+
     </div>
   );
 }
