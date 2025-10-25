@@ -29,6 +29,15 @@ import Invoice from "./pages/Invoices/Invoice";
 import { CreateInvoice } from "./pages/Invoices/CreateInvoice";
 import Banks from "./pages/Banks/Bancks";
 import Registros from "./pages/RegistrosCK/ND/NCR/Registros";
+import Purchases from "./pages/Purchases/Purchases";
+import { CreatePurchases } from "./pages/Purchases/CreatePurchases";
+import { RPHumanResources } from "./pages/Reports/Rp-HumanResources";
+import { RPAccounting } from "./pages/Reports/Rp-Accounting";
+import { RPContacts } from "./pages/Reports/RP-Contacts";
+import { RPInventory } from "./pages/Reports/RP-Inventory";
+import { RPInvoices } from "./pages/Reports/Rp-Invoices";
+import { RPAnalisisFinances } from "./pages/Reports/Rp-AnalisisFinances";
+import { RPPurchases } from "./pages/Reports/Rp-Purchases";
 
 export default function App() {
   return (
@@ -48,6 +57,16 @@ export default function App() {
             <Route path="/Invoice/create" element={<CreateInvoice />} />
             <Route path="/Banks" element={<Banks />} />
             <Route path="/RegistrosCKNDNCR" element={<Registros />} />
+            <Route path="/Purchases" element={<Purchases />} />
+            <Route path="/Purchases/create" element={<CreatePurchases />} />
+            {/* Reportes */}
+            <Route path="/RP-Contacts" element={<RPContacts />} />
+            <Route path="/RP-Accounting" element={<RPAccounting />} />
+            <Route path="/RP-Invoices" element={<RPInvoices />} />
+            <Route path="/RP-Inventory" element={<RPInventory />} />
+            <Route path="/RP-HumanResources" element={<RPHumanResources />} />
+            <Route path="/RP-Purchases" element={<RPPurchases />} />
+            <Route path="/RP-AnalisisFinances" element={<RPAnalisisFinances />} />
             
 
 
